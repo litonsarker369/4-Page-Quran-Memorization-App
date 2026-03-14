@@ -1,0 +1,78 @@
+{
+    "sheets": [
+        {
+            "sheet": 1,
+            "pageStart": 1,
+            "pageEnd": 4,
+            "startSurah": 1,
+            "startAyah": 1,
+            "endSurah": 2,
+            "endAyah": 5,
+            "description": "سورة الفاتحة كاملة + بداية سورة البقرة"
+        },
+        {
+            "sheet": 2,
+            "pageStart": 5,
+            "pageEnd": 8,
+            "startSurah": 2,
+            "startAyah": 6,
+            "endSurah": 2,
+            "endAyah": 37,
+            "description": "سورة البقرة الآيات 6-37"
+        },
+        {
+            "sheet": 3,
+            "pageStart": 9,
+            "pageEnd": 12,
+            "startSurah": 2,
+            "startAyah": 38,
+            "endSurah": 2,
+            "endAyah": 69,
+            "description": "سورة البقرة الآيات 38-69"
+        }
+    ],
+    "reciters": [
+        {
+            "id": "ar.alafasy",
+            "name": " Mishary Alafasy",
+            "nameArabic": "مشاري بن راشد العفاسي"
+        },
+        {
+            "id": "ar.husary",
+            "name": "Mahmoud Al-Husary",
+            "nameArabic": "محمود خليل الحصري"
+        },
+        {
+            "id": "ar.minshawi",
+            "name": "Mohamed Al-Minshawi",
+            "nameArabic": "محمد بن مصطفى المنشاوي"
+        },
+        {
+            "id": "ar.sudais",
+            "name": "Abdul-Basit Sudais",
+            "nameArabic": "عبدالباسط عبد الصمد"
+        }
+    ],
+    "modes": [
+        {
+            "id": "normal",
+            "name": "الوضع العادي",
+            "description": "تشغيل الصوت بشكل طبيعي مع تمييز الآية الحالية"
+        },
+        {
+            "id": "pause",
+            "name": "توقف بعد الآية",
+            "description": "يتوقف المؤذن بعد كل آية3 ثوانٍ ليكررها الطالب"
+        },
+        {
+            "id": "hidden",
+            "name": "اخفاء الكلمات",
+            "description": "يتم اخفاء بعض الكلمات لاختبار حفظ الطالب"
+        },
+        {
+            "id": "cutoff",
+            "name": "ايقاف الصوت",
+            "description": "يتوقف الصوت قبل نهاية الآية ليكملها الطالب من памяти"
+        }
+    ]
+}

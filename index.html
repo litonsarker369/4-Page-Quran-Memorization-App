@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المصحف الإلكتروني - نظام الحفظ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Reem+Kufi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="islamic-pattern"></div>
+    
+    <div class="app">
+        <header class="header">
+            <div class="header-decoration left">
+                <svg viewBox="0 0 100 40" class="islamic-ornament">
+                    <path d="M0,20 Q25,0 50,20 T100,20" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="50" cy="20" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M35,20 L45,20 M55,20 L65,20 M50,10 L50,15 M50,25 L50,30" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </div>
+            
+            <div class="header-content">
+                <h1 class="title">
+                    <span class="title-ar">المصحف الإلكتروني</span>
+                    <span class="title-en">Quran Memorization</span>
+                </h1>
+                <p class="subtitle">نظام حفظ القرآن الكريم بتوزيع الصفحة“四个”المصحف</p>
+            </div>
+            
+            <div class="header-decoration right">
+                <svg viewBox="0 0 100 40" class="islamic-ornament">
+                    <path d="M0,20 Q25,0 50,20 T100,20" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="50" cy="20" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M35,20 L45,20 M55,20 L65,20 M50,10 L50,15 M50,25 L50,30" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="controls-bar">
+                <div class="nav-controls">
+                    <button id="prevSheet" class="btn-nav" title="الورقة السابقة">
+                        <span class="btn-icon">❮</span>
+                        <span class="btn-text">السابق</span>
+                    </button>
+                    <select id="sheetSelect" class="sheet-dropdown">
+                        <option value="1">الورقة 1 · صفحة 1-4</option>
+                    </select>
+                    <button id="nextSheet" class="btn-nav" title="الورقة التالية">
+                        <span class="btn-text">التالي</span>
+                        <span class="btn-icon">❯</span>
+                    </button>
+                </div>
+                
+                <div class="playback-controls">
+                    <button id="prevVerse" class="btn-control" title="آية سابقة">
+                        <span>⏮</span>
+                    </button>
+                    <button id="playBtn" class="btn-play">
+                        <span id="playIcon">▶</span>
+                    </button>
+                    <button id="nextVerse" class="btn-control" title="آية التالية">
+                        <span>⏭</span>
+                    </button>
+                </div>
+
+                <div class="progress-info">
+                    <span id="verseProgress">الآية 1 من 31</span>
+                    <span class="separator">•</span>
+                    <span id="loopProgress">التكرار 1 من 5</span>
+                </div>
+            </div>
+
+            <div class="content-area">
+                <div class="sheet-info">
+                    <h2 id="sheetTitle">صفحات 1-4</h2>
+                    <p id="sheetRange">سورة الفاتحة •الفاتحة → سورة البقرة •البقرة</p>
+                </div>
+
+                <div class="mushaf-container">
+                    <div class="mushaf-frame">
+                        <div class="frame-corner top-left"></div>
+                        <div class="frame-corner top-right"></div>
+                        <div class="frame-corner bottom-left"></div>
+                        <div class="frame-corner bottom-right"></div>
+                        
+                        <div class="mushaf-pages" id="mushafPages">
+                            <div class="mushaf-page" id="page1">
+                                <span class="page-label">1</span>
+                                <img src="https://i.ibb.co.com/S74RsNnn/page-001.png" id="page1Img" alt="صفحة 1">
+                            </div>
+                            <div class="mushaf-page" id="page2">
+                                <span class="page-label">2</span>
+                                <img src="
+https://i.ibb.co.com/XfgWrB6b/page-002.png" id="page2Img" alt="صفحة 2">
+                            </div>
+                            <div class="mushaf-page" id="page3">
+                                <span class="page-label">3</span>
+                                <img src="
+https://i.ibb.co.com/WvcQntcv/page-003.png
+" id="page3Img" alt="صفحة 3">
+                            </div>
+                            <div class="mushaf-page" id="page4">
+                                <span class="page-label">4</span>
+                                <img src="https://i.ibb.co.com/MyBngMwH/page-004.png" id="page4Img" alt="صفحة 4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-toggle">
+                    <button id="settingsBtn">
+                        <span>⚙️</span>
+                        <span>الإعدادات</span>
+                    </button>
+                </div>
+
+                <div class="settings-panel" id="settingsPanel">
+                    <div class="setting-group">
+                        <label>القارئ</label>
+                        <select id="reciterSelect">
+                            <option value="ar.alafasy">مشاري العفاسي</option>
+                            <option value="ar.husary">محمود الحصري</option>
+                            <option value="ar.minshawi">المنشاوي</option>
+                            <option value="ar.sudais">عبدالباسط الصمد</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-group">
+                        <label>وضع التدريب</label>
+                        <select id="modeSelect">
+                            <option value="continuous">تشغيل مستمر</option>
+                            <option value="pause">توقف بعد الآية</option>
+                            <option value="hidden">إخفاء الكلمات</option>
+                            <option value="cutoff">إيقاف الصوت</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-group">
+                        <label>التكرار</label>
+                        <select id="repeatSelect">
+                            <option value="5" selected>5 مرات</option>
+                            <option value="10">10 مرات</option>
+                            <option value="continuous">لا نهائي</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-group">
+                        <label>الوقت بين الآيات</label>
+                        <select id="pauseSelect">
+                            <option value="0">0 ثانية</option>
+                            <option value="1">1 ثانية</option>
+                            <option value="2">2 ثانية</option>
+                            <option value="3" selected>3 ثواني</option>
+                            <option value="5">5 ثواني</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="current-verse-card">
+                    <div class="card-header">
+                        <span class="card-icon">☪</span>
+                        <h3>الآية الحالية</h3>
+                    </div>
+                    <p id="currentVerseInfo" class="verse-ref">الفاتحة • الفاتحة · الآية 1</p>
+                    <p id="currentVerseText" class="verse-arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+                </div>
+
+                <div class="verses-list">
+                    <div class="list-header">
+                        <span class="card-icon">📖</span>
+                        <h3>آيات هذه الورقة</h3>
+                    </div>
+                    <div id="versesList" class="verses-scroll"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="audio-status" id="audioStatus">
+                <span class="status-dot"></span>
+                <span>الصوت جاهز</span>
+            </div>
+            <p class="footer-text">﴾ بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ ﴿</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
